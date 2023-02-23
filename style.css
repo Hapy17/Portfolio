@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root{
+    --color-darkBlue: #010A13;
+    --color-orange: #CD7A13;
+    --color-light: #F7EDE2;
+    --fontWeight-light: 300;
+    --fontWeight-regular: 400;
+    --fontWeight-bold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-darkBlue);
+    color: var(--color-light);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3{
+    font-weight: var(--fontWeight-bold);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Bootstrap button change */
+.btn-primary{
+    background-color: var(--color-orange);
+    border: var(--color-orange);
+}
+.btn-primary:hover{
+    background-color: var(--color-darkBlue);
+    border: var(--color-darkBlue);
+    color: var(--color-orange);
+}
+
+/* NavBar */
+nav.navbar>div.container-fluid, nav.navbar>div.container-fluid button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: var(--color-light);
+    text-align: end;
+}
+
+.navbar a::after{
+    content: "|";
+    margin-left: 1.5rem;
+}
+
+.navbar li:last-child a::after{
+    display: none;
+}
+
+
+@media (max-width: 425px) {
+    .navbar a::after{
+        display: none;
+    }
+}
+
+
+
+
+/* !NavBar */
+
+/* Hero */
+/* #hero{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#hero div{
+    width: 90%;
+    margin :auto;
+    text-align: center;
+}
+
+#hero div h1{
+    text-align: center;
+    font-size: 8rem;
+    font-weight: var(--fontWeight-bold);
+    line-height: 6rem;
+
+}
+
+#hero div h2{
+    position: relative;
+    font-size: 2rem;
+    font-weight: var(--fontWeight-light);
+    letter-spacing: .9rem;
+}
+#hero div h2::before{
+    content: "";
+        width: 100%;
+        height: 50px;
+        z-index: -1;
+        position: absolute;
+        top: -5px;
+        left: -10px;
+        background: var(--color-orange);
+        transform: rotate(-1deg);
+
+} */
+/* !Hero */
+
+/* About */
+
+#about{
+    background-color: var(--color-light);
+    color: var(--color-darkBlue);
+    padding: 2rem 2rem;
+
+}
+
+
+
+
+/* !About */
