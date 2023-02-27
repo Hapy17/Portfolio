@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
 :root{
+    --width-section: 1024px;
     --color-darkBlue: #010A13;
     --color-orange: #CD7A13;
     --color-light: #F7EDE2;
@@ -28,6 +29,11 @@ h3{
     text-align: center;
 }
 
+p{
+    text-overflow: ellipsis;
+}
+
+
 /* Bootstrap button change */
 .btn-primary{
     background-color: var(--color-orange);
@@ -40,6 +46,11 @@ h3{
 }
 
 /* NavBar */
+nav.navbar{
+    width: var(--width-section);
+    margin: auto;
+}
+
 .navbar-collapse{
     display: flex;
     justify-content: flex-end;
@@ -61,6 +72,10 @@ h3{
 
 
 @media (max-width: 425px) {
+    nav.navbar{
+        width: 320px;
+    }
+
     .navbar a::after{
         display: none;
     }
@@ -71,20 +86,19 @@ h3{
     }
 }
 
-
-
-
 /* !NavBar */
 
 /* Hero */
-/* #hero{
+#hero{
     height: 100dvh;
+    width: var(--width-section);
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 #hero div{
-    width: 90%;
+    width: var(--width-section);
     margin :auto;
     text-align: center;
 }
@@ -96,6 +110,9 @@ h3{
     line-height: 6rem;
 
 }
+#hero div h1 span.firstName{
+    letter-spacing: .5rem;
+}
 
 #hero div h2{
     position: relative;
@@ -105,16 +122,40 @@ h3{
 }
 #hero div h2::before{
     content: "";
-        width: 100%;
-        height: 50px;
-        z-index: -1;
-        position: absolute;
-        top: -5px;
-        left: -10px;
-        background: var(--color-orange);
-        transform: rotate(-1deg);
+    width: 70%;
+    height: 50px;
+    z-index: -1;
+    position: absolute;
+    translate: 50% 50%;
+    top: -70%;
+    left: -20%;
+    background: var(--color-orange);
+    transform: rotate(-1deg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
-} */
+@media (max-width: 425px) {
+    #hero , #hero div{
+        width: 320px;
+    }
+
+    #hero div h1{
+        font-size: 4rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+    #hero div h2{
+        font-size: 1rem;
+        letter-spacing: .5rem;
+    }
+
+    #hero div h2::before{
+        width: 90%;
+        height: 30px;
+        top: -90%;
+        left: -40%;
+    }
+}
 /* !Hero */
 
 /* About */
@@ -122,8 +163,42 @@ h3{
 #about{
     background-color: var(--color-light);
     color: var(--color-darkBlue);
-    padding: 2rem 2rem;
+    width: var(--width-section);
+    padding:2rem 0;
+}
 
+#about div.container h3{
+    margin-bottom: 2rem;
+}
+
+#about div.container div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    /* text-align: justify; */
+}
+#about div.container div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about div.container div :nth-child(3){
+    grid-row: 2/4;
+}
+
+@media (max-width: 425px) {
+
+    #about{
+        width: 100%;
+    }
+    #about div.container div{
+        grid-template-columns: 1fr;
+    }
+    #about div.container div :nth-child(3){
+        grid-row: 4;
+    }
+    
 }
 
 
