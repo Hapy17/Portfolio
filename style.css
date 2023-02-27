@@ -283,7 +283,7 @@ footer{
     background-color: var(--color-darkBlue);
     color: var(--color-light);
     padding: 2rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 
