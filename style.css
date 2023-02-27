@@ -27,7 +27,10 @@ h3{
     font-size: 2rem;
     text-transform: uppercase;
     text-align: center;
+    padding: 2rem 0;
+    margin: 0;
 }
+
 
 p{
     text-overflow: ellipsis;
@@ -35,6 +38,11 @@ p{
 
 
 /* Bootstrap button change */
+button a{
+    text-decoration: none;
+    color: var(--color-light);
+    
+}
 .btn-primary{
     background-color: var(--color-orange);
     border: var(--color-orange);
@@ -44,6 +52,7 @@ p{
     border: var(--color-darkBlue);
     color: var(--color-orange);
 }
+
 
 /* NavBar */
 nav.navbar{
@@ -163,23 +172,19 @@ nav.navbar{
 #about{
     background-color: var(--color-light);
     color: var(--color-darkBlue);
-    width: var(--width-section);
-    padding:2rem 0;
-}
-
-#about div.container h3{
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 #about div.container div{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+    margin: auto;
     /* text-align: justify; */
 }
 #about div.container div img{
+    aspect-ratio: 16/8;
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -187,21 +192,100 @@ nav.navbar{
     grid-row: 2/4;
 }
 
-@media (max-width: 425px) {
 
-    #about{
-        width: 100%;
-    }
-    #about div.container div{
-        grid-template-columns: 1fr;
-    }
-    #about div.container div :nth-child(3){
-        grid-row: 4;
-    }
-    
+/* !About */
+
+/* Skills */
+
+#skills{
+    background-color: var(--color-darkBlue);
+    color: var(--color-light);
+    padding-bottom: 2rem;
+}
+
+#skills div{
+    width: var(--width-section);
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#skills div img{
+    height: 60px;
+}
+/* !Skills */
+
+/* Projets */
+
+#projects{
+    background-color: var(--color-light);
+    color: var(--color-darkBlue);
+    padding-bottom: 2rem;
+}
+
+#projects h4{
+    width: var(--width-section);
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* !Projets */
+
+/* Contact */
+#contact{
+    width: var(--width-section);
+    margin: auto;
+
+}
+#contact div{
+    margin: auto;
+}
+
+#contact div form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+#contact div form :nth-child(3){ 
+    grid-column: 1/3;
+}
+
+#contact div form :nth-child(4),#contact div form :nth-child(5){ 
+    grid-column: 1/3;
+    text-align: center;
+}
+#contact div form :nth-child(6){ 
+    grid-column: 1/3;
+    margin: auto;
+    text-align: center;
+}
+
+#contact div.socials{ 
+    width: 300px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact div.socials i{ 
+    color: var(--color-orange);
+    font-size: 3rem;
+}
+
+/* !Contact */
+
+/* Footer */
+
+footer{
+    background-color: var(--color-darkBlue);
+    color: var(--color-light);
+    padding: 2rem 0;
+    text-align: center;
 }
 
 
 
 
-/* !About */
