@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root{
+    --width-section: 1024px;
+    --color-darkBlue: #010A13;
+    --color-orange: #CD7A13;
+    --color-light: #F7EDE2;
+    --fontWeight-light: 300;
+    --fontWeight-regular: 400;
+    --fontWeight-bold: 700;
+}

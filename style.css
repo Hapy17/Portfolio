@@ -31,18 +31,23 @@ h3{
     margin: 0;
 }
 
-
-p{
-    text-overflow: ellipsis;
-}
-
-
 /* Bootstrap button change */
 button a{
     text-decoration: none;
     color: var(--color-light);
     
 }
+
+#contact div form button.sendForm:hover{
+    cursor: not-allowed;
+}
+
+.btn:disabled{
+    background-color: var(--color-orange);
+    border: var(--color-darkBlue);
+    color: var(--color-light);
+}
+
 .btn-primary{
     background-color: var(--color-orange);
     border: var(--color-orange);
@@ -79,6 +84,14 @@ nav.navbar{
     display: none;
 }
 
+.navbar a:hover::after{
+    color: var(--color-light);
+}
+.navbar a:hover{
+    color: var(--color-orange);
+}
+
+
 
 @media (max-width: 425px) {
     nav.navbar{
@@ -100,7 +113,7 @@ nav.navbar{
 /* Hero */
 #hero{
     height: 100dvh;
-    width: var(--width-section);
+    /* width: var(--width-section); */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -143,9 +156,9 @@ nav.navbar{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1024px) {
     #hero , #hero div{
-        width: 320px;
+        width: 100%;
     }
 
     #hero div h1{
@@ -159,10 +172,10 @@ nav.navbar{
     }
 
     #hero div h2::before{
-        width: 90%;
+        width: 300px;
         height: 30px;
-        top: -90%;
-        left: -40%;
+        top: -100%;
+        left: -45%;
     }
 }
 /* !Hero */
@@ -175,21 +188,36 @@ nav.navbar{
     padding-bottom: 2rem;
 }
 
+#about div.container{
+    width: var(--width-section);
+    margin: auto;
+}
+
 #about div.container div{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
-    margin: auto;
-    /* text-align: justify; */
 }
 #about div.container div img{
-    aspect-ratio: 16/8;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 #about div.container div :nth-child(3){
     grid-row: 2/4;
+}
+
+@media(max-width: 1024px){
+    #about div.container{
+        width: auto;
+    }
+    #about div.container div{
+        grid-template-columns: 1fr;
+    }
+    #about div.container div :nth-child(3){
+        grid-row: 1;
+    }
 }
 
 
@@ -214,6 +242,18 @@ nav.navbar{
 #skills div img{
     height: 60px;
 }
+
+@media(max-width: 1024px){
+    #skills{
+        width: 100%;
+    }
+    #skills div{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
 /* !Skills */
 
 /* Projets */
@@ -231,6 +271,12 @@ nav.navbar{
     font-size: 1rem;
 }
 
+@media (max-width: 1024px) {
+    #projects h4{
+        width: 100%;
+    }
+}
+
 /* !Projets */
 
 /* Contact */
@@ -244,9 +290,11 @@ nav.navbar{
 }
 
 #contact div form{
-    display: grid;
+    display: none;
+    /* display: grid; */
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+    padding: 1rem;
 }
 
 #contact div form :nth-child(3){ 
@@ -257,7 +305,7 @@ nav.navbar{
     grid-column: 1/3;
     text-align: center;
 }
-#contact div form :nth-child(6){ 
+#contact div form :nth-child(5), #contact div form :nth-child(6) { 
     grid-column: 1/3;
     margin: auto;
     text-align: center;
@@ -275,16 +323,44 @@ nav.navbar{
     font-size: 3rem;
 }
 
+@media (max-width: 1024px) {
+    #contact{
+        width: 100%;
+    }
+    #contact div form{
+        grid-template-columns: 1fr;
+    }
+    #contact div form :nth-child(3){ 
+        grid-column: 1;
+    }
+    #contact div form :nth-child(4),#contact div form :nth-child(5){ 
+        grid-column: 1;
+    }
+    #contact div form :nth-child(5), #contact div form :nth-child(6) { 
+        grid-column: 1;
+    }
+}
+
 /* !Contact */
 
 /* Footer */
 
 footer{
+    width: var(--width-section);
+    margin: auto;
     background-color: var(--color-darkBlue);
     color: var(--color-light);
     padding: 2rem 0;
-    text-align: left;
+    text-align: center;
 }
+
+@media (max-width: 1024px) {
+    footer{
+        width: 100%;
+    }
+}
+
+/* !Footer */
 
 
 
