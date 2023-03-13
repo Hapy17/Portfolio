@@ -57,6 +57,19 @@ button a{
     border: var(--color-darkBlue);
     color: var(--color-orange);
 }
+.btn-primary:active{
+    background-color: var(--color-orange) !important;
+    border: var(--color-darkBlue);
+    color: var(--color-light);
+    outline: 1px solid var(--color-darkBlue);
+}
+.btn-primary:focus-visible{
+    background-color: var(--color-orange);
+    border: var(--color-darkBlue);
+    color: var(--color-light);
+    outline: 1px solid var(--color-darkBlue);
+    box-shadow: none;
+}
 
 
 /* NavBar */
@@ -264,12 +277,64 @@ nav.navbar{
     padding-bottom: 2rem;
 }
 
+#projects div.cards{
+    width: var(--width-section);
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#projects div.cards div.card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#projects div.cards div.card div.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#projects div.cards div.card img.card-img-top{                     
+    object-fit: contain;
+}
+
+#projects div.cards div.card div.badges{
+    margin-bottom: .5rem;
+}
+
+#projects div.cards div.card div.badges span.badge{
+    border: 2px solid var(--color-orange);
+    background-color: RGBA(13,110,253,var(--bs-bg-opacity,0))!important;
+    color: var(--color-orange)!important;
+}
+
+#projects div.cards div.card p.card-text{
+    font-size: .8rem;
+    font-weight: var(--fontWeight-light);
+    color: var(--color-darkBlue);
+}
+
+#projects div.cards div.card a.btn{
+    width: 100%;
+}
+
+
+
+
+
+
+/* 
 #projects h4{
     width: var(--width-section);
     margin: auto;
     text-align: center;
     font-size: 1rem;
-}
+} */
 
 @media (max-width: 1024px) {
     #projects h4{
