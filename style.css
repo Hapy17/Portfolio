@@ -293,6 +293,11 @@ nav.navbar{
     justify-content: space-between;
 }
 
+#projects div.cards div.card h5.card-title{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 #projects div.cards div.card div.card-body{
     display: flex;
     flex-direction: column;
@@ -304,6 +309,7 @@ nav.navbar{
 }
 
 #projects div.cards div.card div.badges{
+    font-size: .8rem;
     margin-bottom: .5rem;
 }
 
@@ -317,6 +323,7 @@ nav.navbar{
     font-size: .8rem;
     font-weight: var(--fontWeight-light);
     color: var(--color-darkBlue);
+    opacity: .8;
 }
 
 #projects div.cards div.card a.btn{
