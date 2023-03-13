@@ -330,6 +330,12 @@ nav.navbar{
     width: 100%;
 }
 
+@media (max-width: 1024px) {
+    #projects div.cards{
+        width: 100%;
+    }
+}
+
 
 
 
